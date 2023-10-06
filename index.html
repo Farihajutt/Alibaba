@@ -1,0 +1,3171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: OpenSans, Roboto, Helvetica Neue, Helvetica, Arial, Microsoft YaHei;
+        }
+
+        .NAVBARR {
+            height: 40px;
+            width: 100%;
+            position: relative;
+            visibility: hidden;
+        }
+
+        .BAR {
+            height: 30px;
+            width: max-content;
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.683);
+        }
+
+        .navbar {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+        }
+
+        .logo {
+            height: 30px;
+            width: 18%;
+
+        }
+
+        .header {
+            height: 20px;
+            width: 10%;
+            margin-left: 20px;
+            font-size: 15px;
+            color: #767676;
+            cursor: pointer;
+
+        }
+        .header:hover{
+            color: orange;
+        }
+
+        .icons {
+            height: 30px;
+            width:15%;
+            margin-left: 400px;
+        }
+       
+
+        .fa-user {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .fa-user:hover{
+            color: orange;
+        }
+
+        .fa-message {
+            font-size: 18px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .fa-message:hover{
+            color: orange;
+        }
+
+        .fa-clipboard {
+            font-size: 18px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .fa-clipboard:hover{
+            color: orange;
+        }
+
+        .fa-cart-shopping {
+            font-size: 18px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .fa-cart-shopping:hover{
+            color: orange;
+        }
+
+        .fa-angle-down {
+            font-size: 10px;
+        }
+
+        .text {
+            height: 30px;
+            width: 25%;
+            display: flex;
+            align-items: center;
+        }
+
+        .border {
+            height: 15px;
+            border-left: 1px solid;
+            color: #767676;
+
+        }
+
+        .borderb1 {
+            border-right: 1px solid;
+            height: 15px;
+            margin-left: 10px;
+            color: #767676;
+        }
+
+        .h1 {
+            margin-left: 10px;
+            font-size: 14px;
+            color: #767676;
+        }
+
+        .bgimage {
+            height: 40vh;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@img/imgextra/i2/O1CN01ouEKQC1iv8mRiHXTL_!!6000000004474-2-tps-3840-440.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .list {
+            height: 100%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .texteria {
+            height: 40px;
+            width: 35%;
+            margin-top: 50px;
+            position: relative;
+
+        }
+
+        .one {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            text-decoration: underline;
+        }
+
+        .two {
+            position: absolute;
+            right: 0;
+            font-weight: lighter;
+            font-size: 16px;
+            color: white;
+            top: 5px;
+        }
+
+        .three {
+            height: 40px;
+            width: 90%;
+            border: none;
+            border-radius: 35px;
+            padding-left: 20px;
+            position: absolute;
+
+
+        }
+
+        .five {
+            height: 40px;
+            width: 100%;
+            margin-top: -70px;
+            position: relative;
+        }
+
+        .search {
+            height: 40px;
+            width: 20%;
+            background-color: rgb(255, 106, 0);
+            position: absolute;
+            border-radius: 35px;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .four {
+            color: white;
+
+        }
+
+        .main {
+            height: max-content;
+            width: 100%;
+            background-color: rgba(228, 225, 225, 0.224);
+            position: relative;
+            padding: 1px;
+        }
+
+        .six {
+            height: 70px;
+            border-radius: 15px;
+            width: 95%;
+            background-color: white;
+            left: 2.5%;
+            position: absolute;
+            z-index: 1;
+            top: -30px;
+        }
+
+        .seven {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+
+        .eight {
+            height: 100%;
+            width: 33%;
+            display: flex;
+        }
+
+        .one1 {
+            height: 50px;
+            width: 50px;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-image: url(https://s.alicdn.com/@img/imgextra/i3/O1CN01aAxGMe1v6NtHLSPTU_!!6000000006123-2-tps-80-80.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .one2 {
+            height: 50px;
+            width: 70%;
+            margin-top: 10px;
+            margin-left: 20px;
+
+        }
+
+        .one3 {
+            font: 16px;
+            font-weight: bold;
+            color: #000000;
+            margin-top: 5px;
+        }
+
+        .one4 {
+            font-size: 12px;
+            color: #767676;
+            margin-top: 5px;
+        }
+
+        .one5 {
+            border-right: 1px solid;
+            height: 70px;
+            margin-top: -55px;
+            color: #767676;
+        }
+
+        .nine {
+            height: 100%;
+            width: 34%;
+            display: flex;
+        }
+
+        .one6 {
+            height: 50px;
+            width: 50px;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-image: url(https://s.alicdn.com/@img/imgextra/i3/O1CN01x6u1G11nkfo8ssSw4_!!6000000005128-2-tps-80-80.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .ten {
+            height: 100%;
+            width: 33%;
+            display: flex;
+        }
+
+        .one7 {
+            height: 50px;
+            width: 50px;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-image: url(https://s.alicdn.com/@img/imgextra/i4/O1CN01fzSGP51wUUM0Tx75d_!!6000000006311-2-tps-80-80.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .one8 {
+            height: 80vh;
+            width: 95%;
+            margin: auto;
+            margin-top: 60px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .one9 {
+            height: 100%;
+            width: 25%;
+        }
+
+        .one10 {
+            height: 90%;
+            width: 600px;
+            overflow: hidden;
+
+        }
+
+        .one101 {
+            height: 100%;
+            width: 2400px;
+            position: relative;
+
+
+        }
+
+        .one102 {
+            height: 100%;
+            width: 600px;
+            position: absolute;
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(https://s.alicdn.com/@img/imgextra/i2/O1CN01iIalTM27u6IJey2BY_!!6000000007856-0-tps-990-400.jpg);
+            background-position: center;
+            background-size: cover;
+            animation: slide1 10s linear infinite;
+
+        }
+
+        .one103 {
+            height: 100%;
+            width: 600px;
+            position: absolute;
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(https://s.alicdn.com/@img/imgextra/i2/O1CN01vq19eN1iGpyc4OjVe_!!6000000004386-0-tps-990-400.jpg);
+            background-position: center;
+            background-size: cover;
+            animation: slide2 10s linear infinite;
+
+        }
+
+        .one104 {
+            height: 100%;
+            width: 600px;
+            position: absolute;
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(https://s.alicdn.com/@img/imgextra/i4/O1CN01JgRl601H4vxdfrNxd_!!6000000000705-2-tps-990-400.png);
+            background-position: center;
+            background-size: cover;
+            animation: slide3 10s linear infinite;
+
+        }
+
+        @keyframes slide1 {
+            0% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            26% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            51% {
+                opacity: 0;
+            }
+
+            75% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+
+            }
+        }
+
+        @keyframes slide2 {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            26% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            51% {
+                opacity: 0;
+            }
+
+            75% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+
+            }
+
+        }
+
+        @keyframes slide3 {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            26% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            51% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+
+            }
+        }
+
+        .one11 {
+            height: 100%;
+            width: 25%;
+        }
+
+        .one12 {
+            font-size: 16px;
+            margin-left: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .one13 {
+            width: 90%;
+            margin: auto;
+            border-bottom: 1px solid;
+            margin-top: 20px;
+            color: #7676765b;
+        }
+
+        .one14 {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .one15 {
+            height: 40px;
+            width: 30px;
+            margin-left: 10px;
+            background-image: url(https://sc02.alicdn.com/kf/HTB12RuNUmzqK1RjSZFH7623CpXa6.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .one16 {
+            height: 40px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .one18:hover {
+            color: orange;
+        }
+
+        .one17 {
+            height: 30px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            height: 450px;
+            width: 600px;
+            position: absolute;
+            background-color: white;
+            z-index: 1;
+            left: 40px;
+            top: -50px;
+            visibility: hidden;
+            transition: .25s;
+        }
+
+        .s1 {
+            top: -100px;
+        }
+
+        .s2 {
+            top: -150px;
+        }
+
+        .s3 {
+            top: -200px;
+        }
+
+        .s4 {
+            top: -250px;
+        }
+
+        .s5 {
+            top: -300px;
+        }
+
+        .s6 {
+            top: -350px;
+        }
+
+        .s7 {
+            top: -400px;
+        }
+
+        .one17:hover .dropdown {
+            visibility: visible;
+        }
+
+        .d1 {
+            height: 50%;
+            width: 100%;
+            display: flex;
+        }
+
+        .d2 {
+            height: 45%;
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .d11 {
+            height: 100%;
+            width: 33%;
+        }
+
+        .d12 {
+            height: 100%;
+            width: 33%;
+        }
+
+        .d13 {
+            height: 100%;
+            width: 33%;
+        }
+
+        .two1 {
+            font-weight: bold;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .two2 {
+            font-size: 12px;
+            margin-left: 10px;
+            color: #333333;
+            margin-top: 5px;
+        }
+
+        .one18 {
+            color: #333333;
+            font-size: 14px;
+        }
+
+        .fa-greater-than {
+            font-size: 14px;
+        }
+
+        .one19 {
+            height: 40px;
+            width: 30px;
+            margin-left: 10px;
+            background-image: url(https://sc02.alicdn.com/kf/HTB1gUuPUkzoK1RjSZFl761i4VXaw.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .one20 {
+            height: 40px;
+            width: 30px;
+            margin-left: 10px;
+            background-image: url(https://sc02.alicdn.com/kf/HTB1JdWLUhTpK1RjSZR0762EwXXa6.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .one21 {
+            height: 40px;
+            width: 30px;
+            margin-left: 10px;
+            background-image: url(https://sc02.alicdn.com/kf/HTB1AkuTUgHqK1RjSZJn762NLpXa2.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .one22 {
+            height: 40px;
+            width: 30px;
+            margin-left: 10px;
+            background-image: url(https://sc02.alicdn.com/kf/H5e92ef24edc94162b72c331cbd6fbe6fn.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .one23 {
+            height: 40px;
+            width: 30px;
+            margin-left: 10px;
+            background-image: url(https://sc02.alicdn.com/kf/HTB1RxCkXHys3KVjSZFn760FzpXaP.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .one24 {
+            height: 40px;
+            width: 30px;
+            margin-left: 10px;
+            background-image: url(https://sc02.alicdn.com/kf/HTB1K6G0UcfpK1RjSZFO7616nFXah.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .one25 {
+            height: 40px;
+            width: 30px;
+            margin-left: 10px;
+            background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .six1 {
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        .six2 {
+            margin-left: 40px;
+        }
+
+        .six3 {
+            height: 80px;
+            width: 90%;
+            margin: auto;
+            background-color: rgb(244, 244, 244);
+            border-radius: 5px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .six4 {
+            height: 100%;
+            width: 70%;
+            display: flex;
+            align-items: center;
+        }
+
+        .six5 {
+            height: 80%;
+            width: 25%;
+            background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01TJxTjd1m7ufWlgcUQ_!!6000000004908-0-tps-1024-1024.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .six7 {
+            height: 80%;
+            width: 25%;
+            background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01ips21L1buUuLEZGW7_!!6000000003525-0-tps-128-128.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .six6 {
+            color: #767676;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        .six8 {
+            margin: 20px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .six9 {
+            height: 30px;
+            width: 90%;
+            border-radius: 35px;
+            margin: auto;
+            margin-top: 20px;
+            background-color: rgb(255, 102, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .six10 {
+            color: white;
+            font-weight: bold;
+
+        }
+
+        .six11 {
+            height: 30px;
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            border: 1px solid;
+            background-color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 35px;
+            color: #333333;
+            cursor: pointer;
+        }
+
+        .section1 {
+            height: 180px;
+            width: 95%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ten1 {
+            height: 100%;
+            width: 32%;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .tex {
+            font-weight: bold;
+            margin: 10px;
+            color: #333333;
+        }
+
+        .ten11 {
+            height: 120px;
+            width: 30%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 15px;
+        }
+
+        .ten14 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Ha3ef024b59fe493e88676a199017efa3V.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten16 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H3216ab57063d4759b3390f68049684c4W.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten17 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H832caaa038904be781fbd5c4480b2969u.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten19 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H199a5d9b6cdb4c02bc5ffb39f1fd1b70k.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten20 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hea73fa96bd2241ebb7b7fe56245a4d83L.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten21 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H53de4b57c0a0462183e8c0424c46b820q.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten22 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H91f38b772397495da7cfcda392cbc1f8H.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten23 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H4b04edf2ec714e5d8cd9657131d8bcb76.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten24 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H685e5a2c284a4196a2e4c0c692adc83ce.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten25 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H83c0bbdb3c2b4d9290535180ccc3dec1a.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten26 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Ha42e150de4434a1eb5f80e5b766fcc807.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten27 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hc6cf6b53536a4362870c1043d1ab4a75a.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten28 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hd275659cf8204096ab07032a3c861e2bK.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten29 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/U17d4b6e6d246457aa77a24b89952f50cT.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten30 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hc1be4fec4cca4d7c93e521db51796c4ai.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten31 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hc3e8026e2da449799c36a462932fc34e7.png_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten32 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hc1c5a12695644eef965e78f7437d9075c.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten33 {
+            height: 90px;
+            width: 80%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H7c9f396ddde74e0b9625c54751e6670f7.jpg_220x220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ten15 {
+            font-weight: bold;
+            font-size: 12px;
+            color: #333333;
+            text-align: center;
+            margin-top: 10px;
+
+
+        }
+
+        .ten18 {
+            font-size: 12px;
+            text-align: center;
+            color: #666666;
+        }
+
+        .ten12 {
+            height: 120px;
+            width: 30%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .ten13 {
+            height: 120px;
+            width: 30%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .ten2 {
+            height: 100%;
+            width: 32%;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .ten3 {
+            height: 100%;
+            width: 32%;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .section2 {
+            height: 40px;
+            width: 95%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+
+        }
+
+        .ten34 {
+            font-size: 24px;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .ten35 {
+            font-size: 24px;
+            color: #333333;
+            font-weight: bold;
+            margin-left: 60px;
+        }
+
+        .ten36 {
+            height: 5px;
+            width: 280px;
+            background-color: gainsboro;
+            border-radius: 20px;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+
+        .ten37 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            margin-left: 50px;
+        }
+
+        .ten38 {
+            height: 5px;
+            width: 170px;
+            background-color: gainsboro;
+            border-radius: 20px;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+
+        .ten39 {
+            height: 100%;
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .ten41 {
+            height: 90px;
+            width: 60%;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hf8ff99b8b3044fc8b6a1dd92c6590445z.jpg_220x220.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .ten47 {
+            height: 90px;
+            width: 60%;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hb246a6d8bae54198b6b751fd1b9b1968d.png_220x220.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .ten49 {
+            height: 90px;
+            width: 60%;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H0e7733bcf2024ca38157ad5a975d5b7dG.jpg_220x220.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        .ten42 {
+            height: 35px;
+            width: 70%;
+            background-color: rgb(255, 102, 0);
+            border-radius: 35px;
+            margin: auto;
+            margin-top: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+        }
+
+        .ten43 {
+            font-weight: bold;
+
+        }
+
+        .ten40 {
+            height: 100%;
+            width: 48%;
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        .ten44 {
+            height: 100px;
+            width: 60%;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Haf7cc6e5b1834924a55ab9212d8fb2eaB.jpg_220x220.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .ten48 {
+            height: 100px;
+            width: 60%;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H19607326d11c4464bc811fece86b2f93B.jpg_220x220.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .ten50 {
+            height: 100px;
+            width: 60%;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H0063a3a2a38f46109a7f73ff37a440dfk.jpg_220x220.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+
+        .ten45 {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .ten46 {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .ten51 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+
+        .section4 {
+            height: 350px;
+            width: 95%;
+            margin: auto;
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+
+        .for1 {
+            height: 100%;
+            width: 19%;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .for2 {
+            font-size: 14px;
+            color: #333333;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+        .for3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        .for4 {
+            font-size: 14px;
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+
+        .for11 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H40052676a07346ce8b412147eaaff763L.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for12 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H2305c6ed83a644169896fa43bc78fbb9C.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for13 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H3c3f962012c943dd83e0ac837e0e55bff.png_480x480.jpg  );
+            background-position: center;
+            background-size: cover;
+        }
+        .for14 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hfad07baa5de94332b4897cb735eca863N.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for15 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Haaa88c7ccabd4759b6dde58b512736d5q.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for16 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/A40e7fc21b74a4b4292ee05d276c54985o.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for17 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H640165dd12e546b7b3d2c9fa004a722ff.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for18 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H5b3654df123641c1be8bb3b4e0484bcfK.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for19 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hb020a427b7014cc4a74334f5743a1c1ef.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for20 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/S638a8a90d6b84d319263f14d71bb0995g.jpeg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for21 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H40cfbe01a9734fbf820d5cfb7436f4aca.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for22 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hfafe97d3a8bc4d559db599cdc2062a14r.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for23 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H5737a5f94aae4a4591a73ba112b822c1f.jpeg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for24 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Ha188f4da59d14d67bfd2a2ff170caeadR.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for25 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Aa9ea4437f37d407e8941b9dbc13f6cabV.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for26 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Ha6e0539a1dce43d8b74618a586e538e6q.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for27 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H376532d1d9364d31ba05858a4c6ef05an.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for28 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/U0fc0f41828bc4ef2b54eb6cce157473d1.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for29 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/U6b30c3e11f2e46c5aaa3da49c1c5d792C.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for30 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/U6517f1807c7140de8427d029dfb30a5bL.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for31 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H86896357e17a4442af4fa53d68321ddf0.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for32 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Sf9e3b43618244cb2a705e0231bd468d9K.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for33{
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Ac0deb6c04f1445229f99920adb97ed92i.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for34 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/HTB1tm8Hdi6guuRkSmLyq6AulFXal.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for35 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Ha248f62dd2e54d4895501f9202a07d1cm.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for36 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H4e19c7bef3ad4ff286585b6825cda0505.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for37 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/U7bca0753936d487c99071accf0f30ff3y.png_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for38 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H2e9849c27d2b4411be40cee8e2ecfea1x.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for39 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H9dc3248cd0c24e05871d7fe32e0d4fe3Q.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for40 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H260f9eba6960409aa7d03c5d42bb3934J.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for41 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/He0b6a7cec9f7472b95ea97b187dce098E.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for42 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H98b2147a40a14b39bf548cd92cf125c3c.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for43 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hc0ad836b40454a4782622a9126e63e61Q.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for44 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H9891e3f2ab5c4bc3b92cdb8004b6ba95B.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for45{
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Adbb4cdaf06b14f228bd005d2474129f5n.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for46 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hc668caba5c9b4cc1b7b789089a80f541D.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for47 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H4dad2242cbe64d588fdcd62b64da8a9cb.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for48 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Uac08348dfe93429bb89038695e0ddc6cB.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for49 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/Hf45794da4bf34d8fa4c1e833df9390a4e.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for50 {
+            height: 70%;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H1f8c0d3d5dc7414a982c84a612335164M.jpg_480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .for51{
+            margin-left: 30px;
+            margin-top: 30px;
+            font-size: 16px;
+            color: #666666;
+        }
+        .for52{
+            font-size: 22px;
+            color: #222222;
+        }
+        .for53{
+            height: 260px;
+            width: 95%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .for54{
+            height: 100%;
+            width: 49%;
+            border-radius: 10px;
+            background-color: white;
+
+        }
+        .for55{
+            height: 200px;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@img/tfs/TB1uRJAxnqWBKNjSZFxXXcpLpXa-1180-360.png);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+            position: relative;
+
+        }
+        .for56{
+            color: white;
+            font-weight: bolder;
+            margin-top: 100px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .for57{
+            color: white;
+            margin-left: 20px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .dropdownfor55{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.82);
+            position: absolute;
+            top: 0;
+            cursor: pointer;
+            visibility: hidden;
+        }
+        .for55:hover .dropdownfor55{
+            visibility: visible;
+        }
+        .for60{
+            color:#767676;
+            margin: 20px;
+        }
+        .for61{
+            color: white;
+            margin-left: 20px;
+        }
+        .for62{
+            color: white;
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        .for63{
+            color: white;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        .for64{
+            font-size: 16px;
+            color: #333333;
+            font-weight: bold;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .for65{
+            color: #666666;
+            font-size: 12px;
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        .for66{
+            height: 30px;
+            margin-left: 540px;
+            margin-top: -35px;
+            width: 30px;
+          
+        }
+        .for67{
+            height: 200px;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@img/imgextra/i3/O1CN017MSDFT1euu038qE9l_!!6000000003932-0-tps-1180-360.jpg);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+            position: relative;
+
+        }
+        .dropdownfor55{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.82);
+            position: absolute;
+            top: 0;
+            cursor: pointer;
+            visibility: hidden;
+        }
+        .for67:hover .dropdownfor55{
+            visibility: visible;
+        }
+        .for68{
+            height: 200px;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@img/tfs/TB10TSmw67nBKNjSZLeXXbxCFXa-1180-360.png);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+            position: relative;
+
+        }
+        .for68:hover .dropdownfor55{
+            visibility: visible;
+        }
+        .for69{
+            height: 200px;
+            width: 100%;
+            background-image: url(https://s.alicdn.com/@img/tfs/TB17KqGN7zoK1RjSZFlXXai4VXa-1180-360.png);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+            position: relative;
+
+        }
+        .for69:hover .dropdownfor55{
+            visibility: visible;
+        }
+        .nine1{
+            height: 40px;
+            width: 95%;
+            margin: auto;
+            margin-top: 30px;
+            position: relative;
+        }
+        .nine2{
+            font-size: 22px;
+            color: #222222;
+            font-weight: bold;
+
+        }
+        .nine3{
+            height: 20px;
+            width: 30px;
+            position: absolute;
+            right: 0;
+            top: 5px;
+            background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01goKJ191eLBFDKRvVA_!!6000000003854-2-tps-54-45.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .nine4{
+            height: 40px;
+            width: 90%;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nine5{
+            height: 30px;
+            width: 30px;
+            background-image: url(https://s.alicdn.com/@img/tfs/TB1aUq6cgoQMeJjy0FoXXcShVXa-48-48.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine13{
+            margin-left: -70px;
+            font-size: 14px;
+            color:rgba(0, 0, 0, 0.605);
+            cursor: pointer;
+        }
+        .nine13:hover{
+            color: orange;
+        }
+        .nine14{
+            color: #1688CC;
+            cursor: pointer;
+        }
+        .nine14:hover{
+            color: orange;
+        }
+        .nine15{
+            height: 50px;
+            width: 100%;
+            margin-top: 70px;
+            background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01Go0CAQ1ndLTdKk2D0_!!6000000005112-2-tps-1500-60.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine16{
+            height: 95vh;
+            width: 100%;
+            background-color: rgb(68,82,104);
+            margin-top: 30px;
+            padding: 1px;
+        }
+        .nine17{
+            height: 180px;
+            width: 90%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nine18{
+            height: 100%;
+            width: 19%;
+        }
+        .nine19{
+            color: #FFFFFF;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .nine20{
+            color: #FFFFFF;
+            font-size: 12px;
+            list-style: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .nine20:hover{
+            text-decoration: underline;
+
+        }
+        .nine21{
+            border-bottom: 1px solid #222222;
+            margin: auto;
+            margin-top: 20px;
+            width: 95%;
+        }
+
+        .nine6{
+            height: 30px;
+            width: 30px;
+            background-image: url(https://s.alicdn.com/@img/tfs/TB18omIbIrI8KJjy0FhXXbfnpXa-48-48.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine7{
+            height: 30px;
+            width: 30px;
+            background-image: url(https://s.alicdn.com/@img/tfs/TB1U8_xAeH2gK0jSZJnXXaT1FXa-268-179.jpg_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine8{
+            height: 30px;
+            width: 30px;
+            background-image: url(https://s.alicdn.com/@img/tps/TB1QwGEPFXXXXXUaXXXXXXXXXXX-48-48.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine9{
+            height: 30px;
+            width: 30px;
+            background-image: url(https://s.alicdn.com/@img/tps/TB1tQC4PFXXXXaOXpXXXXXXXXXX-48-48.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine10{
+            height: 30px;
+            width: 30px;
+            background-image: url(https://s.alicdn.com/@img/tps/TB1WVfXPFXXXXXvXpXXXXXXXXXX-48-48.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine11{
+            height: 30px;
+            width: 30px;
+            background-image: url(https://s.alicdn.com/@img/tps/TB1fky3PFXXXXcuXpXXXXXXXXXX-48-48.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine12{
+            height: 30px;
+            width: 30px;
+            background-image: url(https://s.alicdn.com/@img/imgextra/i3/O1CN01Sbi1Tm28po6huT3zL_!!6000000007982-2-tps-48-48.png_80x80.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine22{
+            height: 40px;
+            width: 85%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nine23{
+            height: 100%;
+            width: 35%;
+            display: flex;
+        }
+        .nine26{
+            color: white;
+            font-size: 15px;
+            color: #FFFFFF;
+        }
+        .nine27{
+            height: 40px;
+            width: 37%;
+        }
+        .nine28{
+            height: 40px;
+            width: 37%;
+            margin-left: 20px;
+        }
+        .nine24{
+            height: 100%;
+            width: 25%;
+            display: flex;
+        }
+         .nine25{
+            height: 100%;
+            width: 25%;
+            display: flex;
+        }
+        .nine29{
+            height: 30px;
+            width: 30px;
+            margin-left: 10px;
+        }
+        .nine30{
+            height: 20px;
+            width: 20px;
+            margin-left: 5px;
+            background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5GYWNlYm9vazwvdGl0bGU+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCBmaWxsPSIjMzg1NzlBIiB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiByeD0iNzgiLz48cGF0aCBkPSJNNzMxLjg3NCA0MzUuOTY3aDExMi4xMlYyOTcuNTdoLTExMi4xMmMtOTIuNzc1IDAtMTY5LjA0IDgxLjQ5NC0xNjkuMDQgMTgxLjYxdjcwLjI5M0w0NTEuNTUgNTQ5djEzNS4xODRoMTExLjI4NXYzMzkuNzY0aDE0MS4wMTJsLS40MjUtMzM5Ljc2NGgxMjkuMzIzTDg0NC4wMSA1NDlINzAzLjg0NmwtLjQyNS03NS42OTdjMC0yMy45NzcgMTUuMjM0LTM3LjMzNiAyOC40NTItMzcuMzM2IiBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L2c+PC9zdmc+);
+            background-position: center;
+            background-size: cover;
+        }
+         .nine31{
+            height: 20px;
+            width: 20px;
+            border: 1px solid;
+            margin-left: 5px;
+            background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01BKrEOV1nJePUWxfZN_!!6000000005069-2-tps-60-60.png);
+            background-position: center;
+            background-size: cover;
+        }
+         .nine32{
+            height: 20px;
+            width: 20px;
+            margin-left: 5px;
+            background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01fEq1ov1bzXEwzkxBv_!!6000000003536-2-tps-60-60.png);
+            background-position: center;
+            background-size: cover;
+        }
+         .nine33{
+            height: 20px;
+            width: 20px;
+            margin-left: 5px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5MaW5rZUluPC90aXRsZT48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGZpbGw9IiMwMDY0QTMiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiIHJ4PSI3OCIvPjxwYXRoIGQ9Ik0yMjcuMzI4IDM4OS44MjRoMTE0LjYyNHY0MzIuNEgyMjcuMzI4di00MzIuNHptNTcyLjggMjQuOGMyOC4zMiAyMy4zOTIgNDIuNDY0IDYyLjIyNCA0Mi40NjQgMTE2LjQxNnYyOTEuMTg0aC0xMTUuODRWNTU5LjIxNmMwLTIyLjc1Mi0zLjAyNC00MC4yMDgtOS4wNTYtNTIuMzUyLTExLjAwOC0yMi4yNC0zMi0zMy4zMjgtNjMuMDA4LTMzLjMyOC0zOC4wOCAwLTY0LjE5MiAxNi4yNzItNzguMzUyIDQ4LjgtNy4zNiAxNy4yLTExLjAwOCAzOS4xMzYtMTEuMDA4IDY1LjgyNHYyMzQuMDY0SDQ1Mi4yNzJWMzkwLjYwOGgxMDkuNDU2djYzLjA4OGMxNC40OTYtMjIuMjA4IDI4LjE5Mi0zOC4yMDggNDEuMDg4LTQ4IDIzLjE4NC0xNy40NTYgNTIuNTQ0LTI2LjE5MiA4OC4wOTYtMjYuMTkyIDQ0LjQ5Ni4wMTYgODAuODk2IDExLjY5NiAxMDkuMjE2IDM1LjEyek0zNTUuODcyIDI1Ny4yMTZjLS4wMDQgMzkuMzQ1LTMxLjkwMyA3MS4yMzYtNzEuMjQ4IDcxLjIzMi0zOS4zNDUtLjAwNC03MS4yMzYtMzEuOTAzLTcxLjIzMi03MS4yNDguMDA1LTM5LjM0NSAzMS45MDMtNzEuMjM2IDcxLjI0OC03MS4yMzIgMzkuMzQ1LjAwNCA3MS4yMzcgMzEuOTAzIDcxLjIzMiA3MS4yNDh6IiBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L2c+PC9zdmc+);
+            background-position: center;
+            background-size: cover;
+        }
+         .nine34{
+            height: 20px;
+            width: 20px;
+            margin-left: 5px;
+            background-image: url(https://img.alicdn.com/imgextra/i4/O1CN010MA5Su1nonFx9ehDD_!!6000000005137-2-tps-60-60.png);
+            background-position: center;
+            background-size: cover;
+        }
+         .nine35{
+            height: 20px;
+            width: 20px;
+            margin-left: 5px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5Ud2l0dGVyPC90aXRsZT48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGZpbGw9IiMwNjlGRjUiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiIHJ4PSI3OCIvPjxwYXRoIGQ9Ik04NjIuMDY0IDM0OS42YTI3MC4zNTIgMjcwLjM1MiAwIDAgMS03Ni45OTIgMjAuOTYgMTMzLjU4NCAxMzMuNTg0IDAgMCAwIDU4LjkxMi03My41NjggMjcwLjUyOCAyNzAuNTI4IDAgMCAxLTg1LjA3MiAzMi4yODggMTM0LjIwOCAxMzQuMjA4IDAgMCAwLTk3Ljc3Ni00Mi4wMTZjLTc0IDAtMTMzLjk2OCA1OS41Mi0xMzMuOTY4IDEzMi45NzYgMCAxMC4zNjggMS4xODQgMjAuNTkyIDMuNDg4IDMwLjMyYTM4MS41NTIgMzgxLjU1MiAwIDAgMS0yNzYuMTQ0LTEzOC45MTIgMTMxLjQyNCAxMzEuNDI0IDAgMCAwLTE4LjE2IDY2Ljc4NGMwIDQ2LjE2IDIzLjY2NCA4Ni44MTYgNTkuNiAxMTAuNjcyYTEzMy41ODQgMTMzLjU4NCAwIDAgMS02MC42NzItMTYuNjcybC0uMDE2IDEuNjhjMCA2NC40MzIgNDYuMjA4IDExOC4xNDQgMTA3LjQ3MiAxMzAuMzUyYTEzNS44NCAxMzUuODQgMCAwIDEtNjAuNTI4IDIuMjU2YzE3Ljc0NSA1NC4zMjUgNjguMDEgOTEuNDAzIDEyNS4xNTIgOTIuMzJhMjcwLjAzMiAyNzAuMDMyIDAgMCAxLTE2Ni4zNjggNTYuOTc2IDI3MC41OCAyNzAuNTggMCAwIDEtMzEuOTg0LTEuOTA0IDM4MS4yOTYgMzgxLjI5NiAwIDAgMCAyMDUuMzYgNTkuNzQ0YzI0Ni40MTYgMCAzODEuMTY4LTIwMi41NiAzODEuMTY4LTM3OC4yNzIgMC01Ljc2LS4xNDQtMTEuNTItLjM2OC0xNy4yYTI2OS42IDI2OS42IDAgMCAwIDY2Ljg5Ni02OC43ODQiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvZz48L3N2Zz4=);
+            background-position: center;
+            background-size: cover;
+        }
+        .nine36{
+            color: #FFFFFF;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+
+
+
+        /* ... /////media queries...////  */
+        @media screen and (max-width:990px) {
+            .NAVBARR {
+                visibility: visible;
+            }
+
+            .navbar {
+                visibility: hidden;
+            }
+
+            .list {
+                width: 80%;
+            }
+
+            .five {
+                margin-top: -60px;
+            }
+
+            .one8 {
+                /* height: 100vh; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="NAVBARR">
+        <div class="BAR">
+            <p> <i class="fa-solid fa-bars"></i> MENU</p>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://s.alicdn.com/@img/tfs/TB1hVGkvVP7gK0jSZFjXXc5aXXa-365-49.svg" alt="">
+
+        </div>
+        <div class="header">
+            <p> <i class="fa-solid fa-bars"></i> Categories <i class="fa-solid fa-angle-down"></i></p>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-user"></i> <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-message"></i> <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-clipboard"></i> <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="text">
+            <div class="border"></div>
+            <p class="h1">Help <i class="fa-solid fa-angle-down"></i></p>
+            <div class="borderb1"></div>
+            <p class="h1">English - AUD <i class="fa-solid fa-angle-down"></i> </p>
+            <p class="h1">Ship to: <i class="fa-solid fa-angle-down"></i> </p>
+            <div class="borderb1"></div>
+            <p class="h1">More <i class="fa-solid fa-angle-down"></i></p>
+        </div>
+    </div>
+    <div class="bgimage">
+        <div class="list">
+            <div class="texteria">
+                <h2 class="one">Products</h2>
+                <h2 class="two">Manufacturers</h2>
+            </div>
+            <div class="five">
+                <input class="three" type="text" placeholder="What are you looking for?">
+                <div class="search">
+                    <p class="four"><i class="fa-solid fa-magnifying-glass" style="color: #fafafa;"></i> Search</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="six">
+            <div class="seven">
+                <div class="eight">
+                    <div class="one1"></div>
+                    <div class="one2">
+                        <p class="one3">Request for Quotation</p>
+                        <p class="one4">One request, multiple quotes</p>
+                        <div class="one5"></div>
+                    </div>
+                </div>
+                <div class="nine">
+                    <div class="one6"></div>
+                    <div class="one2">
+                        <p class="one3">Ready to Ship</p>
+                        <p class="one4">Order directly with fast dispatch</p>
+                        <div class="one5"></div>
+                    </div>
+                </div>
+                <div class="ten">
+                    <div class="one7"></div>
+                    <div class="one2">
+                        <p class="one3">Logistics services</p>
+                        <p class="one4"> Reliable shipping by ocean and air</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="one8">
+            <div class="one9">
+                <p class="one12">My markets</p>
+                <div class="one13"></div>
+                <div class="one14">
+                    <div class="one15"></div>
+                    <div class="one16">
+                        <p class="one18">Consumer Electronics</p>
+                    </div>
+                    <div class="one17">
+                        <i class="fa-solid fa-greater-than" style="color: #494a4b;"></i>
+                        <div class="dropdown">
+                            <div class="d1">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                            <div class="d2">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one14">
+                    <div class="one19"></div>
+                    <div class="one16">
+                        <p class="one18">Apparel</p>
+                    </div>
+                    <div class="one17">
+                        <i class="fa-solid fa-greater-than" style="color: #494a4b;"></i>
+                        <div class="dropdown s1">
+                            <div class="d1">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                            <div class="d2">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one14">
+                    <div class="one20"></div>
+                    <div class="one16">
+                        <p class="one18">Vehicle Parts & Accessories</p>
+                    </div>
+                    <div class="one17">
+                        <i class="fa-solid fa-greater-than" style="color: #494a4b;"></i>
+                        <div class="dropdown s2">
+                            <div class="d1">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                            <div class="d2">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one14">
+                    <div class="one21"></div>
+                    <div class="one16">
+                        <p class="one18">Sports & Entertainment</p>
+                    </div>
+                    <div class="one17">
+                        <i class="fa-solid fa-greater-than" style="color: #494a4b;"></i>
+                        <div class="dropdown s3">
+                            <div class="d1">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                            <div class="d2">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one14">
+                    <div class="one22"></div>
+                    <div class="one16">
+                        <p class="one18">Industrial Machinery</p>
+                    </div>
+                    <div class="one17">
+                        <i class="fa-solid fa-greater-than" style="color: #494a4b;"></i>
+                        <div class="dropdown s4">
+                            <div class="d1">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                            <div class="d2">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one14">
+                    <div class="one23"></div>
+                    <div class="one16">
+                        <p class="one18">Home & Garden</p>
+                    </div>
+                    <div class="one17">
+                        <i class="fa-solid fa-greater-than" style="color: #494a4b;"></i>
+                        <div class="dropdown s5">
+                            <div class="d1">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                            <div class="d2">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one14">
+                    <div class="one24"></div>
+                    <div class="one16">
+                        <p class="one18">Beauty</p>
+                    </div>
+                    <div class="one17">
+                        <i class="fa-solid fa-greater-than" style="color: #494a4b;"></i>
+                        <div class="dropdown s6">
+                            <div class="d1">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                            <div class="d2">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one14">
+                    <div class="one25"></div>
+                    <div class="one16">
+                        <p class="one18">All Categories</p>
+                    </div>
+                    <div class="one17">
+                        <i class="fa-solid fa-greater-than" style="color: #494a4b;"></i>
+                        <div class="dropdown s7">
+                            <div class="d1">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                            <div class="d2">
+                                <div class="d11">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d12">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                                <div class="d13">
+                                    <p class="two1">Computer Hardware & Software</p>
+                                    <p class="two2">Tablet PC Stands</p>
+                                    <p class="two2">Mini PCs</p>
+                                    <p class="two2">Desktops</p>
+                                    <p class="two2">Servers</p>
+                                    <p class="two2">PDAs</p>
+                                    <p class="two2">Other Networking Devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one10">
+                <div class="one101">
+                    <div class="one102"></div>
+                    <div class="one103"></div>
+                    <div class="one104"></div>
+                    <div class="one105"></div>
+                </div>
+            </div>
+            <div class="one11">
+                <h2 class="six1">Buyers Club benefits <i class="fa-solid fa-arrow-right six2"
+                        style="color: #333333;"></i></h2>
+                <div class="six3">
+                    <div class="six4">
+                        <p class="six6">US $10 off with a new supplier</p>
+                    </div>
+                    <div class="six5"></div>
+                </div>
+                <div class="six3">
+                    <div class="six4">
+                        <p class="six6">RFQ: quotes with supplier preferences</p>
+                    </div>
+                    <div class="six7"></div>
+                </div>
+                <p class="six8">Sign up to enjoy exciting Buyers Club benefits</p>
+                <div class="six9">
+                    <p class="six10">join for free</p>
+                </div>
+                <div class="six11">Sign in</div>
+            </div>
+        </div>
+        <div class="section1">
+            <div class="ten1">
+                <p class="tex">New arrivals</p>
+                <div class="ten11">
+                    <div class="ten14"></div>
+                    <p class="ten15">$4.04</p>
+                    <p class="ten18">2 pieces</p>
+                </div>
+                <div class="ten12">
+                    <div class="ten16"></div>
+                    <p class="ten15">$27.39</p>
+                    <p class="ten18">10 sets</p>
+                </div>
+                <div class="ten13">
+                    <div class="ten17"></div>
+                    <p class="ten15">$1.45</p>
+                    <p class="ten18">1 set</p>
+                </div>
+            </div>
+            <div class="ten2">
+                <p class="tex">Top ranking</p>
+                <div class="ten11">
+                    <div class="ten19"></div>
+                    <p class="ten15">$13.68</p>
+                    <p class="ten18">1 piece</p>
+                </div>
+                <div class="ten12">
+                    <div class="ten20"></div>
+                    <p class="ten15">$9.12</p>
+                    <p class="ten18">2 pieces</p>
+                </div>
+                <div class="ten13">
+                    <div class="ten21"></div>
+                    <p class="ten15">$1.83</p>
+                    <p class="ten18">1 kilogram</p>
+                </div>
+            </div>
+            <div class="ten3">
+                <p class="tex">Weekly deals</p>
+                <div class="ten11">
+                    <div class="ten22"></div>
+                    <p class="ten15">$2.84</p>
+                </div>
+                <div class="ten12">
+                    <div class="ten23"></div>
+                    <p class="ten15">$3.50</p>
+                    <p class="ten18">&8.16</p>
+                </div>
+                <div class="ten13">
+                    <div class="ten24"></div>
+                    <p class="ten15">$1.56</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section1">
+            <div class="ten1">
+                <p class="tex">Dropshipping</p>
+                <div class="ten11">
+                    <div class="ten25"></div>
+                    <p class="ten15">$7.89</p>
+                    <p class="ten18">1 piece</p>
+                </div>
+                <div class="ten12">
+                    <div class="ten26"></div>
+                    <p class="ten15">$0.1522</p>
+                    <p class="ten18">1 piece</p>
+                </div>
+                <div class="ten13">
+                    <div class="ten27"></div>
+                    <p class="ten15">$28.92</p>
+                    <p class="ten18">1.0 piece</p>
+                </div>
+            </div>
+            <div class="ten2">
+                <p class="tex">Regional specialties</p>
+                <div class="ten11">
+                    <div class="ten28"></div>
+                    <p class="ten15">$12.03</p>
+                    <p class="ten18">1 piece</p>
+                </div>
+                <div class="ten12">
+                    <div class="ten29"></div>
+                    <p class="ten15">$1.53</p>
+                    <p class="ten18">1 piece</p>
+                </div>
+                <div class="ten13">
+                    <div class="ten30"></div>
+                    <p class="ten15">$0.3044</p>
+                    <p class="ten18">2 pieces</p>
+                </div>
+            </div>
+            <div class="ten3">
+                <p class="tex">Tips</p>
+                <div class="ten11">
+                    <div class="ten31"></div>
+                    <p class="ten15">$0.0761</p>
+                </div>
+                <div class="ten12">
+                    <div class="ten32"></div>
+                    <p class="ten15">$14.46</p>
+                </div>
+                <div class="ten13">
+                    <div class="ten33"></div>
+                    <p class="ten15">$9.13</p>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <p class="ten34">Personal Protective Equipment</p>
+            <p class="ten35">LIVE</p>
+            <div class="ten36"></div>
+            <p class="ten37">Sample Center</p>
+            <div class="ten38"></div>
+        </div>
+        <div class="section1">
+            <div class="ten1">
+                <div class="ten39">
+                    <div class="ten41"></div>
+                    <div class="ten42">
+                        <p class="ten43">View More</p>
+                    </div>
+                </div>
+                <div class="ten40">
+                    <div class="ten44"></div>
+                    <p class="ten45">&21.22</p>
+                    <p class="ten46">300.0 pieces</p>
+
+                </div>
+            </div>
+            <div class="ten2">
+                <div class="ten39">
+                    <div class="ten47"></div>
+                    <div class="ten42">
+                        <p class="ten43">View More</p>
+                    </div>
+                </div>
+                <div class="ten40">
+                    <div class="ten48"></div>
+                    <p class="ten45">&21.22</p>
+                    <p class="ten46">300.0 pieces</p>
+
+                </div>
+
+            </div>
+            <div class="ten3">
+                <div class="ten39">
+                    <div class="ten49"></div>
+                    <div class="ten42">
+                        <p class="ten43">View More</p>
+                    </div>
+                </div>
+                <div class="ten40">
+                    <div class="ten50"></div>
+                    <p class="ten45">&21.22</p>
+                    <p class="ten46">300.0 pieces</p>
+
+                </div>
+            </div>
+        </div>
+        <p class="ten51">Just for you</p>
+        <div class="section4">
+            <div class="for1">
+                <div class="for11"></div>
+                <p class="for2">TW9204420 Crochet Beach Wear Swimsuit Cover Up...</p>
+                <p class="for3">$13.11 - $14.49</p>
+                <p class="for4">MOQ: 1 set</p>
+            </div>
+            <div class="for1">
+                <div class="for12"></div>
+                <p class="for2">2022 New Bikinis 2Pcs Swimsuit Triangle Bikini Set..</p>
+                <p class="for3">$8.86 - $9.92</p>
+                <p class="for4">MOQ: 2 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for13"></div>
+                <p class="for2">Large Space muti-functional foldable container house..</p>
+                <p class="for3">$11,902.88 - $45,780.27</p>
+                <p class="for4">MOQ: 1.0 unit</p>
+            </div>
+            <div class="for1">
+                <div class="for14"></div>
+                <p class="for2">7,000lbs Square Trailer Jack, Side Mount,Top Wind, Weld..</p>
+                <p class="for3">$35.87</p>
+                <p class="for4">MOQ: 300 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for15"></div>
+                <p class="for2">Custom 2022 hot sale couple halter swimsuits men swim...</p>
+                <p class="for3">$10.69 - $19.84</p>
+                <p class="for4">MOQ: 50 sets</p>
+            </div>
+        </div>
+
+        <div class="section4">
+            <div class="for1">
+                <div class="for16"></div>
+                <p class="for2">Customized Swimsuit Women Swimsuit Print Swimming Suits Two Piece Bikini 2021</p>
+                <p class="for3">$7.64 - $18.32</p>
+                <p class="for4">MOQ: 50 sets</p>
+            </div>
+            <div class="for1">
+                <div class="for17"></div>
+                <p class="for2">Reusable Silicone Foldable Water Bottle Portable Sports..</p>
+                <p class="for3">$2.83 - $3.59</p>
+                <p class="for4">MOQ: 100 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for18"></div>
+                <p class="for2">Australian Standard Travel Trailer Campers Motorhomes...</p>
+                <p class="for3">$9,459.73</p>
+                <p class="for4">MOQ: 1.0 gross</p>
+            </div>
+            <div class="for1">
+                <div class="for19"></div>
+                <p class="for2">Swimwear OEM Bikini Swimsuit Bikini Set High...</p>
+                <p class="for3">$7.62 - $18.32</p>
+                <p class="for4">MOQ: 50 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for20"></div>
+                <p class="for2">Polyester micro digital printed pareo/sarongs</p>
+                <p class="for3">$3.36 - $3.67</p>
+                <p class="for4">MOQ: 100.0 pieces</p>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="for1">
+                <div class="for21"></div>
+                <p class="for2">2023 New High-Rise Bow Butt Lifter Tummy Tucker Women</p>
+                <p class="for3">$5.65 - $6.87</p>
+                <p class="for4">MOQ: 4 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for22"></div>
+                <p class="for2">
+                    High Italian Quality Elegant Long Black Women Dress Wit..</p>
+                <p class="for3">$18.32 - $27.47</p>
+                <p class="for4">MOQ: 18 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for23"></div>
+                <p class="for2">
+                    Custom Logo Swimsuit Women String Extreme Micro..</p>
+                <p class="for3">$7.64 - $15.27</p>
+                <p class="for4">MOQ: 1 piece</p>
+            </div>
+            <div class="for1">
+                <div class="for24"></div>
+                <p class="for2">
+                    2022 High Quality Women Bulk Bathing Suits Beachwear..</p>
+                <p class="for3">$8.40 - $12.14</p>
+                <p class="for4">MOQ: 30 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for25"></div>
+                <p class="for2">Best Quality Handmade 700 ML Hammered Copper Water..</p>
+                <p class="for3">$22.13 - $22.22</p>
+                <p class="for4">MOQ: 50 pieces</p>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="for1">
+                <div class="for26"></div>
+                <p class="for2">Cotton organic lace panties in customized designs our store</p>
+                <p class="for3">$0.7631 - $3.06</p>
+                <p class="for4">MOQ: 1000.0 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for27"></div>
+                <p class="for2">wholesale Custom design digital printing sarongs..</p>
+                <p class="for3">$6.11 - $19.84</p>
+                <p class="for4">MOQ: 1.0 piece</p>
+            </div>
+            <div class="for1">
+                <div class="for28"></div>
+                <p class="for2">Blossom Flower Bali Sarong Handmade</p>
+                <p class="for3">$4.58 - $7.64</p>
+                <p class="for4">MOQ: 100.0 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for29"></div>
+                <p class="for2">Latest Plus Size Panties Fashion Designs women..</p>
+                <p class="for3">$5.35 - $11.45</p>
+                <p class="for4">MOQ: 10.0 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for30"></div>
+                <p class="for2">Wholesale cheap price biodegradable eco friendly..</p>
+                <p class="for3">$0.8394 - $3.04</p>
+                <p class="for4">MOQ: 100.0 pieces</p>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="for1">
+                <div class="for31"></div>
+                <p class="for2">LIANMENG B400 beach dress women cover up bikini women..</p>
+                <p class="for3">$9.16 - $19.84</p>
+                <p class="for4">MOQ: 50 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for32"></div>
+                <p class="for2">
+                    Wholesale Hand Painted Beach Sarong Cover Up 100..</p>
+                <p class="for3">$7.33 - $9.92</p>
+                <p class="for4">MOQ: 12 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for33"></div>
+                <p class="for2">
+                    4 Tiers Gold and Marble Patterned Modern Design..</p>
+                <p class="for3">$29.00 - $39.68</p>
+                <p class="for4">MOQ: 500.0 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for34"></div>
+                <p class="for2">
+                    Latest design seamless pant brief for girl's</p>
+                <p class="for3">$1.52 - $4.57</p>
+                <p class="for4">MOQ: 1000 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for35"></div>
+                <p class="for2">SUNNY Solid Color Bikini Women's Two-piece Swimsuit</p>
+                <p class="for3">$9.27 - $9.59</p>
+                <p class="for4">MOQ: 2.0 pieces</p>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="for1">
+                <div class="for36"></div>
+                <p class="for2">Softness washed reused indefinitely panty liners..</p>
+                <p class="for3">$49.60 - $54.56</p>
+                <p class="for4">MOQ: 1.0 piece</p>
+            </div>
+            <div class="for1">
+                <div class="for37"></div>
+                <p class="for2">Fencing Panels / Corrugated fencing/ Temporary Fencing..</p>
+                <p class="for3">$29.00 - $59.52</p>
+                <p class="for4">MOQ: 190.0 meters</p>
+            </div>
+            <div class="for1">
+                <div class="for38"></div>
+                <p class="for2">
+                    HuiLin wholesale modest waves ruched stretch satin..</p>
+                <p class="for3">$7.33 - $13.43</p>
+                <p class="for4">MOQ: 200 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for39"></div>
+                <p class="for2">Twin-Capped Water Filter Bubble Tea Bottle For A..</p>
+                <p class="for3">$21.41 - $30.59</p>
+                <p class="for4">MOQ: 1.0 piece</p>
+            </div>
+            <div class="for1">
+                <div class="for40"></div>
+                <p class="for2">OEM ODM Clothing Manufacturer Custom Brand..</p>
+                <p class="for3">$35.10 - $38.16</p>
+                <p class="for4">MOQ: 500 pieces</p>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="for1">
+                <div class="for41"></div>
+                <p class="for2">Factory Direct Sale swimsuits women's bikini tankinis..</p>
+                <p class="for3">$1.41 - $2.90</p>
+                <p class="for4">MOQ: 10 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for42"></div>
+                <p class="for2">
+                    Hot sale Lace up swimwear women thong two piece..</p>
+                <p class="for3">$7.64 - $18.32</p>
+                <p class="for4">MOQ: 50 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for43"></div>
+                <p class="for2">Paselec GS9 PLUS electric mountain bike 26 inch 48V..</p>
+                <p class="for3">$1,448.19 - $1,677.09</p>
+                <p class="for4">MOQ: 1.0 carton</p>
+            </div>
+            <div class="for1">
+                <div class="for44"></div>
+                <p class="for2">Manufacturer Oem Custom Couples Swimwear Women..</p>
+                <p class="for3">$19.08 - $28.24</p>
+                <p class="for4">MOQ: 2 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for45"></div>
+                <p class="for2">REDROSE PACK OF 3 BIKINI PANTIES has elasticated..</p>
+                <p class="for3">$5.65</p>
+                <p class="for4">MOQ: 100 pieces</p>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="for1">
+                <div class="for46"></div>
+                <p class="for2">mix match rayon printed pareo sarongs bali styles..</p>
+                <p class="for3">$4.09 - $6.87</p>
+                <p class="for4">MOQ: 50 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for47"></div>
+                <p class="for2">TW9204449 Double Fabric Retro Printed Cover Belly..</p>
+                <p class="for3">$11.39 - $13.34</p>
+                <p class="for4">$13.40 - $15.69</p>
+            </div>
+            <div class="for1">
+                <div class="for48"></div>
+                <p class="for2">Big Flower Bali Sarong Handpainting Hawaiian..</p>
+                <p class="for3">$6.11 - $7.64</p>
+                <p class="for4">MOQ: 100.0 pieces</p>
+            </div>
+            <div class="for1">
+                <div class="for49"></div>
+                <p class="for2">2021 China Factory New Product Scooter Electric for..</p>
+                <p class="for3">$114.46 - $137.35</p>
+                <p class="for4">MOQ: 1 piece</p>
+            </div>
+            <div class="for1">
+                <div class="for50"></div>
+                <p class="for2">Transparency Storage Box Stackable For Storing Items..</p>
+                <p class="for3">$13.83</p>
+                <p class="for4">MOQ: 1 piece</p>
+            </div>
+        </div>
+        <p class="for51"> <b class="for52">Trade services</b> Alibaba.com's trade services help ensure that your purchases are protected.</p>
+        <div class="for53">
+            <div class="for54">
+                <div class="for55">
+                    <p class="for56"><i class="fa-solid fa-minus" style="color: #fcfcfd;"></i></p>
+                    <p class="for57">Trade Assurance is a free order protection service offered by Alibaba.com.</p>
+                    <div class="dropdownfor55">
+                        <p class="for60">Benefits</p>
+                        <p class="for61">On time-shipping</p>
+                        <p class="for62">Quality protection</p>
+                        <p class="for63">Learn More <i class="fa-solid fa-arrow-right" style="color: #fbfcfe;"></i></p>
+                    </div>
+                </div>
+                <p class="for64">Trade Assurance</p>
+                <p class="for65">ORDER PROTECTION</p>
+                <div class="for66"></div>
+            </div>
+            <div class="for54">
+                <div class="for67">
+                    <p class="for56"><i class="fa-solid fa-minus" style="color: #fcfcfd;"></i></p>
+                    <p class="for57">Global transcations made simple through our quick, safe, and secure payment system.</p>
+                    <div class="dropdownfor55">
+                        <p class="for60">Benefits</p>
+                        <p class="for61">20+ payment methods and 20+ currencies accepted</p>
+                        <p class="for62">Safe and secure payment system.</p>
+                        <p class="for63">Learn More <i class="fa-solid fa-arrow-right" style="color: #fbfcfe;"></i></p>
+                    </div>
+                </div>
+                <p class="for64">Payment</p>
+                <p class="for65">PAYMENT SOLUTION</p>
+                <div class="for66"></div>
+            </div>
+        </div>
+
+          <div class="for53">
+            <div class="for54">
+                <div class="for68">
+                    <p class="for56"><i class="fa-solid fa-minus" style="color: #fcfcfd;"></i></p>
+                    <p class="for57">Production monitoring and inspection services your Alibaba.com Trade <br> Assurance Orders </p>
+                    <div class="dropdownfor55">
+                        <p class="for60">Benefits</p>
+                        <p class="for61">Production montoring</p>
+                        <p class="for62">On-site factory check</p>
+                        <p class="for63">Learn More <i class="fa-solid fa-arrow-right" style="color: #fbfcfe;"></i></p>
+                    </div>
+                </div>
+                <p class="for64">Inspection Solution</p>
+                <p class="for65">INSPECTION</p>
+                <div class="for66"></div>
+            </div>
+            <div class="for54">
+                <div class="for69">
+                    <p class="for56"><i class="fa-solid fa-minus" style="color: #fcfcfd;"></i></p>
+                    <p class="for57">Fast, reliable shipping by ocean or air</p>
+                    <div class="dropdownfor55">
+                        <p class="for60">Benefits</p>
+                        <p class="for61">Fast ocean and air shipping</p>
+                        <p class="for62">Online tracking</p>
+                        <p class="for63">Learn More <i class="fa-solid fa-arrow-right" style="color: #fbfcfe;"></i></p>
+                    </div>
+                </div>
+                <p class="for64">Ocean and air shipping</p>
+                <p class="for65">LOGISTICS SERVICE</p>
+                <div class="for66"></div>
+            </div>
+        </div>
+        <div class="nine1">
+            <p class="nine2">Suppliers by country or region</p>
+            <p class="nine3"></p>
+            <div class="nine4">
+                <div class="nine5"></div>
+                <p class="nine13">Japan</p>
+                <div class="nine6"></div>
+                 <p class="nine13">USA</p>
+                <div class="nine7"></div>
+                 <p class="nine13">Italy</p>
+                <div class="nine8"></div>
+                 <p class="nine13">Turkey</p>
+                <div class="nine9"></div>
+                 <p class="nine13">Malaysia</p>
+                <div class="nine10"></div>
+                 <p class="nine13">South Korea</p>
+                <div class="nine11"></div>
+                 <p class="nine13">Vietnam</p>
+                 <p class="nine14">More</p>
+            </div>
+        </div>
+        <div class="nine15"></div>
+        <div class="nine16">
+            <div class="nine17">
+                <div class="nine18">
+                    <p class="nine19">Customer services</p>
+                    <ul>
+                        <li class="nine20">Help Center</li>
+                        <li class="nine20">Report abuse</li>
+                        <li class="nine20">Open a case</li>
+                        <li class="nine20">Policies & rules</li>
+                        <li class="nine20">Get paid for your feedback</li>
+                    </ul>
+                </div>
+                <div class="nine18">
+                    <p class="nine19">About us</p>
+                    <ul>
+                        <li class="nine20">About Alibaba.com</li>
+                        <li class="nine20">About Alibaba Group</li>
+                        <li class="nine20">Alibaba.com Blog</li>
+                        <li class="nine20">Legal Notice</li>
+                    </ul>
+                </div>
+                <div class="nine18">
+                    <p class="nine19">Source on Alibaba.com</p>
+                    <ul>
+                        <li class="nine20">Resources</li>
+                        <li class="nine20">Request for Quotation</li>
+                        <li class="nine20">Ready to Ship</li>
+                        <li class="nine20">Buyer partners</li>
+                        <li class="nine20">Alibaba.com Select
+                        </li>
+                    </ul>
+                </div>
+                <div class="nine18">
+                    <p class="nine19">Sell on Alibaba.com</p>
+                    <ul>
+                        <li class="nine20">Supplier memberships</li>
+                        <li class="nine20">Learning Center</li>
+                        <li class="nine20">Partner Program</li>
+                    </ul>
+                </div>
+                <div class="nine18">
+                    <p class="nine19">Trade services</p>
+                    <ul>
+                        <li class="nine20">Trade Assurance
+                        </li>
+                        <li class="nine20">Business identity</li>
+                        <li class="nine20">Logistics services</li>
+                        <li class="nine20">Production Monitoring & Inspection <br> Services</li>
+                        <li class="nine20">Letter of Credit
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nine21"></div>
+            <div class="nine22">
+                <div class="nine23">
+                    <p class="nine26">Download :</p>
+                    <div class="nine27"></div>
+                    <div class="nine28"></div>
+                </div>
+                <div class="nine24">
+                    <p class="nine26">Alibaba Supplier app :</p>
+                    <div class="nine29"></div>
+                </div>
+                <div class="nine25">
+                    <p class="nine26">Follow us:</p>
+                    <div class="nine30"></div>
+                    <div class="nine31"></div>
+                    <div class="nine32"></div>
+                    <div class="nine33"></div>
+                    <div class="nine34"></div>
+                    <div class="nine35"></div>
+                </div>
+            </div>
+            <p class="nine36"> Alibaba.com Site: International - Español - Português - Deutsch - Français - Italiano - हिंदी - Pусский - 한국어 - 日本語 - اللغة العربية - ภาษาไทย - Türk - Nederlands - tiếng Việt - Indonesian - עברית</p>
+            <p class="nine36">AliExpress | 1688.com | Tmall Taobao World | Alipay | Lazada | Taobao Global</p>
+            <p class="nine36">Browse Alphabetically: Onetouch | Country Search | Affiliate</p>
+            <p class="nine36">Product Listing Policy - Intellectual Property Protection - Privacy Policy - Terms of Use - User Information Legal Enquiry Guide</p>
+            <p class="nine36"> © 1999-2023 Alibaba.com. All rights reserved.  浙公网安备 33010002000092号 浙B2-20120091-4</p>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
